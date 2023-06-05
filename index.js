@@ -44,7 +44,15 @@
  ];
 
  function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, 'utf8', (err) =>
-    err ? console.error(err) : console.log('Success')
+    fs.writeFile(fileName, data, (err) =>
+    err ? console.error(err) : console.log('Success!')
   );
  }
+
+ function init() {
+    inquirer.prompt(questions)
+    .then((response) => {
+        writeToFile('README.md', generateMarkdown(response));
+    })};
+
+    init();
