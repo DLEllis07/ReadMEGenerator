@@ -1,5 +1,5 @@
  const inquirer = require('inquirer');
- const fs = require(fs);
+ const fs = require('fs');
  const generateMarkdown = require("./utils/generateMarkdown");
 
  const questions = [
@@ -44,15 +44,42 @@
  ];
 
  function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, (err) =>
-    err ? console.error(err) : console.log('Success!')
-  );
- }
+    fs.writeFile(fileName, data, err => {
+        if (err) {
+          return console.log(err);
+        }
+      
+        console.log("Success! Your README.md file has been generated")
+    });
+}
 
- function init() {
-    inquirer.prompt(questions)
-    .then((response) => {
-        writeToFile('README.md', generateMarkdown(response));
-    })};
 
-    init();
+
+
+// Main function
+async function init() {
+    try {
+
+        // Prompt Inquirer questions
+        const userResponses = await inquirer.prompt(questions);
+        console.log("Your responses: ", userResponses);
+        console.log("Thank you for your responses! Fetching your GitHub data next...");
+    
+        // Call GitHub api for user info
+        const userInfo = await api.getUser(userResponses);
+        console.log("Your GitHub user info: ", userInfo);
+    
+        // Pass Inquirer userResponses and GitHub userInfo to generateMarkdown
+        console.log("Generating your README next...")
+        const markdown = generateMarkdown(userResponses, userInfo);
+        console.log(markdown);
+    
+        // Write markdown to file
+        await writeFileAsync('ExampleREADME.md', markdown);
+
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+init();
