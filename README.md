@@ -1,5 +1,6 @@
 # ReadMEGenerator
 
+
 * [Description](#Description)
 * [Technologies Used](#technologies-used)
 * [Screenshots](#screenshots)
@@ -12,4 +13,11 @@ Behind every great project is a quality README with information regarding the ap
 - Inquirer.js
 
 ## Screenshots
+
 (./assets/Screenshot (1).png)
+
+C:\Users\kinge\Downloads\class-content-main\Module Challenge Assignments\ReadMEGenerator\assets\Screenshot (1).png
+
+
+
+
