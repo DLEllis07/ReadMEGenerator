@@ -13,11 +13,7 @@ Behind every great project is a quality README with information regarding the ap
 - Inquirer.js
 
 ## Screenshots
-
-(./assets/Screenshot (1).png)
-
-C:\Users\kinge\Downloads\class-content-main\Module Challenge Assignments\ReadMEGenerator\assets\Screenshot (1).png
-
+![Screenshot (1)](https://github.com/DLEllis07/ReadMEGenerator/assets/122822611/bbd86d9f-b6ee-4944-9df6-4dd22d479150)
 
 
 
