@@ -12,4 +12,4 @@ Behind every great project is a quality README with information regarding the ap
 - Inquirer.js
 
 ## Screenshots
-(./assets/readme-generator.png)
+(./assets/Screenshot (1).png)
